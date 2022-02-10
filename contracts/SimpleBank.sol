@@ -109,7 +109,7 @@ contract SimpleBank {
       // 2. Transfer Eth to the sender and decrement the withdrawal amount from
          //    sender's balance
          balances[msg.sender] -= withdrawAmount;
-         address(msg.sender).transfer(withdrawAmount);
+         msg.sender.transfer(withdrawAmount);
       
       
 
