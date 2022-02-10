@@ -106,13 +106,11 @@ contract SimpleBank {
       require(withdrawAmount <= balances[msg.sender]); //done
 
 
-      //create conditional statement to withdraw amounts
-      if(withdrawAmount <= balances[msg.sender]) {
-        // 2. Transfer Eth to the sender and decrement the withdrawal amount from
+      // 2. Transfer Eth to the sender and decrement the withdrawal amount from
          //    sender's balance
          balances[msg.sender] -= withdrawAmount;
          msg.sender.transfer(withdrawAmount);
-      } 
+      
       
 
       // 3. Emit the appropriate event for this message
