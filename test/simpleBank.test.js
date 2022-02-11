@@ -18,7 +18,7 @@ contract("SimpleBank", function (accounts) {
   beforeEach(async () => {
     instance = await SimpleBank.new();
   });
-
+  
   it("ready to be solved!", async() => {
     const eth100 = 100e18;
     assert.equal(await web3.eth.getBalance(alice), eth100.toString());
